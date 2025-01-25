@@ -1,0 +1,89 @@
+.testimony{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    h1{
+        font-style: 50px;
+        overflow: hidden;
+    }
+//creates a whole container in the page and sends everything to the center fo the page
+    .container{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .card{
+            width: 250px;
+            height: 70%;
+            
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px -8px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+           
+            transition: all 1s ease;
+
+            &.featured{
+                width: 300px;
+                height: 75%;
+                margin: 0 30px;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+
+            .top{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                img{
+                    padding: 10px;
+                    &.left{
+                        height: 35px;
+                        transform: rotate(270deg);
+                        
+
+                    }
+                    &.user{
+                        height: 80px;
+                        width: 80px;
+                        border-radius: 50%;
+                        
+                    }
+                    &.right{
+                        height: 35px;
+
+                    }
+                }
+            }
+            .center{
+                font-size: 16px;
+
+                &:hover{
+                    background-color: chocolate;
+                }
+            }
+            .bottom{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h3{
+                    font-style: 20px;
+                }
+               span{
+                color: grey;
+               }
+                
+
+            }
+        }
+    }
+}

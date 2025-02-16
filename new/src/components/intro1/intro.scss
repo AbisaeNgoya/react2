@@ -1,4 +1,4 @@
-@import "../../global.scss";
+/*@import "../../global.scss";
 .intro{
     
     background-color: white;
@@ -119,4 +119,147 @@
         
     }
     
+}*/
+
+@import "../../global.scss";
+
+.intro {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+   
+
+    @include mobile {
+        flex-direction: column;
+        padding: 10px;
+        
+    }
+
+    .left {
+        flex: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+
+        .imgcontainer {
+            width: 100%;
+            max-width: 500px; 
+            height: auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        
+
+        @include mobile {
+            max-width: 90%;
+        }
+    }
+
+    .right {
+        flex: 0.5;
+        position: relative;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden;
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+
+            
+            @include mobile {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 50px;
+                color: rgb(92, 92, 219);
+
+                
+
+                @include mobile {
+                    font-size: 30px;
+                    margin-top: 0;
+                }
+            }
+
+            h2 {
+                font-size: 28px;
+                color: $mainColor;
+
+                @include mobile {
+                    font-size: 20px;
+                }
+            }
+
+            h3 {
+                font-size: 22px;
+                color: $mainColor;
+
+                
+
+                @include mobile {
+                    font-size: 16px;
+                }
+            }
+
+            span {
+                font-size: 18px;
+                width: 80%;
+                color: $mainColor;
+                text-align: center;
+
+
+
+                @include mobile {
+                    width: 100%;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        a {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+
+            @include mobile {
+                display: none;
+            }
+
+            img {
+                width: 25px;
+                animation: arrowBlink 2s infinite;
+            }
+
+            @keyframes arrowBlink {
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+    }
 }

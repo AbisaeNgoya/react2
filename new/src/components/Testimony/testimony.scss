@@ -1,4 +1,4 @@
-.testimony{
+/*.testimony{
     background-color: white;
     display: flex;
     align-items: center;
@@ -83,6 +83,115 @@
                }
                 
 
+            }
+        }
+    }
+}*/
+@import "../../global.scss";
+
+.testimony {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+
+    h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #333;
+
+       
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px; // Adds space between cards
+
+        .card {
+            width: 320px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+
+            &.featured {
+                width: 350px;
+                transform: scale(1.1);
+            }
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            @include tablet {
+                width: 280px;
+            }
+
+            @include mobile {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .top {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+
+                img {
+                    &.left, &.right {
+                        height: 35px;
+                    }
+
+                    &.user {
+                        height: 90px;
+                        width: 90px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        border: 3px solid #ddd;
+                    }
+                }
+            }
+
+            .center {
+                font-size: 16px;
+                font-style: italic;
+                color: #555;
+                margin: 15px 0;
+                line-height: 1.6;
+
+                @include mobile {
+                    font-size: 14px;
+                }
+            }
+
+            .bottom {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                h3 {
+                    font-size: 20px;
+                    color: #222;
+                }
+
+                span {
+                    color: gray;
+                    font-size: 14px;
+                }
             }
         }
     }

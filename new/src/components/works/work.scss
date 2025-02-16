@@ -6,6 +6,10 @@
     justify-content: center;
     position: relative;
 
+    @include mobile{
+        display: none;
+    }
+
     .arrow{
         height: 20px;
         cursor: pointer;
@@ -123,6 +127,7 @@
 
     
 }
+
 
 
 

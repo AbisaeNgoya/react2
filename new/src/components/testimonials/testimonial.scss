@@ -1,4 +1,4 @@
-@import "../../global.scss";
+/*@import "../../global.scss";
 
 .testimonial{
     background-color: #fff;
@@ -103,5 +103,120 @@
         }
 
             
+    }
+}
+*/
+@import "../../global.scss";
+
+.testimonial {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include mobile {
+            font-size: 24px;
+        
+        }
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 320px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+
+            @include mobile {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            .top {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+
+                img {
+                    &.left,
+                    &.right {
+                        height: 20px;
+                    }
+
+                    &.user {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        border: 3px solid #4caf50;
+                    }
+                }
+            }
+
+            .center {
+                p {
+                    background-color: #f0f0f0;
+                    padding: 12px;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin: 10px 0;
+
+                    @include mobile {
+                        font-size: 14px;
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .bottom {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                span {
+                    color: gray;
+                    font-size: 14px;
+                }
+            }
+        }
     }
 }

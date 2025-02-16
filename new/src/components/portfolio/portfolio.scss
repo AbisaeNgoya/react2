@@ -1,4 +1,4 @@
-@import "../../global.scss";
+/*@import "../../global.scss";
 
 .portfolio{
    overflow: hidden;
@@ -85,4 +85,105 @@
       }
       
    }
+}*/
+
+@import "../../global.scss";
+
+.portfolio {
+   overflow: hidden;
+   background-color: white;
+   padding: 60px 20px;
+
+   .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      h1 {
+         font-size: 40px;
+         font-weight: bold;
+         color: #333;
+         text-transform: uppercase;
+         margin-bottom: 30px;
+
+         @include mobile {
+            font-size: 28px;
+         }
+      }
+
+      ul {
+         list-style: none;
+         margin: 10px 0;
+         padding: 0;
+         display: flex;
+         gap: 10px;
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+
+      .container {
+         width: 100%;
+         max-width: 1200px;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 20px;
+         justify-content: center;
+         align-items: center;
+
+         @include mobile {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+         }
+
+         .item {
+            width: 100%;
+            max-width: 280px;
+            height: 180px;
+            border-radius: 12px;
+            border: 1px solid lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            transition: transform 0.3s ease-in-out, background-color 0.3s;
+            overflow: hidden;
+
+            @include mobile {
+               height: 140px;
+               max-width: 160px;
+            }
+
+            h3 {
+               position: absolute;
+               font-size: 20px;
+               color: white;
+               font-weight: bold;
+               text-align: center;
+               z-index: 2;
+               padding: 5px 10px;
+               background: rgba(0, 0, 0, 0.5);
+               border-radius: 8px;
+            }
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               transition: opacity 0.3s ease-in-out;
+            }
+
+            &:hover {
+               background-color: $mainColor;
+               transform: scale(1.05);
+
+               img {
+                  opacity: 0.3;
+               }
+            }
+         }
+      }
+   }
 }
+
